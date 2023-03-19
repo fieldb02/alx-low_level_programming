@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 /**
  * main - Entry point
@@ -12,21 +10,25 @@ int main(void)
 	int i;
 	int j;
 
-	for (i = 10; j <= 19; j++)
+	while (j < 10)
 	{
-		for (j = 10; j <= 19; j++)
+		i = 0;
+		while (i < 10)
 		{
-			if ((j % 10) > (i % 10))
+			if (j != i && j < i)
 			{
-				putchar((i % 10) + '0');
-				putchar((j % 10) + '0');
-				if
-				{
-				putchar (',');
-				putchar(' ');
-				}
+				putchar(j + '0');
+				putchar(i + '0');
+			if (i == 10 && j == 9)
+			{
+				break;
 			}
+			putchar(',');
+			putchar(' ');
+			}
+			i++;
 		}
+		j++;
 	}
 	putchar('\n');
 	return (0);
