@@ -9,27 +9,19 @@
  */
 int main(void)
 {
-	int a;
-	int b;
-	int c;
+   int i, j, k;
 
-	for (a = 0; a < 10; a++)
-	{
-		for (b = 0; b < 10; b++)
-		{
-			for (c = 0; b < 10; c++)
-			{
-				if (a != b && b != a && a != c)
-				{
-					putchar(a + '0');
-					putchar(b + '0');
-					putchar(c + '0');
-					putchar(',');
-					putchar(' ');
-				}
-			}
-		}
-	}
-	putchar('\n');
-	return (0);
+   for (i = 0; i < 10; i++) {
+      for (j = 0; j < 10; j++) {
+         for (k = 0; k < 10; k++) {
+            if (i != j && j != k && i != k) {
+               putchar(i + '0');
+               putchar(j + '0');
+               putchar(k + '0');
+            }
+         }
+      }
+   }
+	putchar('0');
+   return (0);
 }
