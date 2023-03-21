@@ -1,20 +1,20 @@
 #include <main.h>
-#include <stdio.h>
 
 /*
- * main - Prints _putchar
+ * main - Prints items with putchar only_
  *
- * Return: Always 0 <Success>
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int str[] = "_putchar";
-	int i;
-
-	for (i = 0; str[i] != \0; i++)
-	{
-		_putchar(str[i]);
-	}
-	_putchar('\n');
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
 	return (0);
 }
