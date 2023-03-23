@@ -11,27 +11,25 @@ int main(void)
 {
 	int a;
 
-	for (a = 1; a <= 100; a++)
+	a = 1;
+	printf("%d", a);
+	for (a = 2; a <= 100; a++)
 	{
 		if (a % 15 == 0)
 		{
-			printf("FizzBuzz");
-			printf(" ");
+			printf(" FizzBuzz");
 		}
 		else if (a % 3 == 0)
 		{
-			printf("Fizz");
-			printf(" ");
+			printf(" Fizz");
 		}
 		else if (a % 5 == 0)
 		{
-			printf("Buzz");
-			printf(" ");
+			printf(" Buzz");
 		}
 		else
 		{
-			printf("%d", a);
-			printf(" ");
+			printf(" %d", a);
 		}
 	}
 	printf("\n");
