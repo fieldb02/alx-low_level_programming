@@ -9,20 +9,17 @@
  */
 void print_number(int n)
 {
-	unsigned int a;
+	unsigned int i = n;
 
-	a = n;
 	if (n < 0)
 	{
-		n *= -1;
-		a = n;
+		i *= -1;
+		i = n;
 		_putchar('-');
 	}
-	a /= 10;
-	if (a != 10)
-	{
-		print_number(a);
-		_putchar((unsigned int) n % 10 + '0');
-	}
-	_putchar(10);
+	i /= 10;
+	if (i != 0)
+		print_number(i);
+	_putchar((unsigned int) n % 10 + '0');
 }
+
