@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_diagonal - Draws a diagona line in the terminal 
+ * print_diagonal - Draws a diagona line in the terminal
  *
  * @n: The number of times the character should be printed
  *
@@ -11,7 +11,7 @@ void print_diagonal(int n)
 {
 	int a;
 	int b;
-	
+
 	if (n <= 0)
 	{
 		_putchar(10);
@@ -20,12 +20,12 @@ void print_diagonal(int n)
 	{
 		for (a = 0; a < n; a++)
 		{
-			_putchar(92);
-			_putchar(10);
 			for (b = 0; b < a; b++)
 			{
 				_putchar(' ');
 			}
+			_putchar(92);
+			_putchar(10);
 		}
 	}
 }
