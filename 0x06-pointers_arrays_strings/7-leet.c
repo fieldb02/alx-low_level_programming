@@ -1,26 +1,29 @@
 #include "main.h"
+#include <string.h>
+#include <stdio.h>
 
 /**
- * leet - replace letter with words
- * @n: input value
- * Return: n
+ * leet - Encodes string to an integer
+ * @str: String to Encode
+ * Retuen: Encoded string
  */
-
-char *leet(char *n)
+char *leet(char *str)
 {
-	int i, j;
-	char *e1
-	e1 = "aAeEoOtTlL4433007711";
+    char leet_chars[] = "AaEeOoTtLl";
+    char leet_nums[] = "4433007711";
+    int i;
+    size_t j;
 
-	for (i = 0; n[i] != '\0'; i++)
-	{
-		for (j = 0; j < 10; j++)
-		{
-			if (n[i] == e1[j])
-			{
-				n[i] = e1[j + 10];
-			}
-		}
-	}
-	return (n);
+    for (i = 0; str[i] != '\0'; i++)
+    {
+        for (j = 0; j < strlen(leet_chars); j++)
+        {
+            if (str[i] == leet_chars[j])
+            {
+                str[i] = leet_nums[j];
+                break;
+            }
+        }
+    }
+    return str;
 }
