@@ -13,6 +13,7 @@ void print_chessboard(char (*a)[8])
 	int i;
 	int j;
 
+	_putchar(32);
 	for (c = 'A'; c <= 'H'; c++)
 	{
 		_putchar(32);
