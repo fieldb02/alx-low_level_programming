@@ -1,80 +1,88 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-#define DELIMITER " "
+int count_words(char *str);
+int count_chars(char *str);
 
 /**
- * count_words - function to count words
- * @str: input str
- * Return: count
+ * strtow - splits a string into words
+ * @str: the string to split
+ * Return: a pointer to an array of strings (words), or NULL if it fails
+ */
+char **strtow(char *str)
+{
+	char **words;
+	int i, j, k, n;
+
+	if (str == NULL || *str == '\0')
+		return (NULL);
+	n = count_words(str);
+	if (n == 0)
+		return (NULL);
+	words = malloc(sizeof(char *) * (n + 1));
+	if (words == NULL)
+		return (NULL);
+	i = 0;
+	while (*str != '\0')
+	{
+		while (*str == ' ')
+			str++;
+		if (*str == '\0')
+			break;
+		k = count_chars(str);
+		words[i] = malloc(sizeof(char) * (k + 1));
+		if (words[i] == NULL)
+		{
+			while (i--)
+				free(words[i]);
+			free(words);
+			return (NULL);
+		}
+		for (j = 0; j < k; j++)
+			words[i][j] = *str++;
+		words[i++][j] = '\0';
+	}
+	words[i] = NULL;
+	return (words);
+}
+
+/**
+ * count_words - counts the number of words in a string
+ * @str: the string to count words in
+ * Return: the number of words in the string
  */
 int count_words(char *str)
 {
 	int count = 0;
-	int is_word = 0;
 
-	while (*str)
+	while (*str != '\0')
 	{
-		if (*str == ' ')
-			is_word = 0;
-		else if (!is_word)
-		{
+		while (*str == ' ')
+			str++;
+		if (*str != '\0')
 			count++;
-			is_word = 1;
-		}
-		str++;
+		while (*str != ' ' && *str != '\0')
+			str++;
 	}
-
 	return (count);
 }
 
 /**
- * strtow - function to split string into word
- * @str: input to split
- * Return: NULL or " "
+ * count_chars - counts the number of characters until
+ * the next space or null
+ * @str: the string to count characters in
+ * Return: the number of characters until the next space or null
  */
-
-char **strtow(char *str)
+int count_chars(char *str)
 {
-	int i, j;
-	char **words;
-	int word_count;
+	int count = 0;
 
-	if (str == NULL || *str == '\0')
-		return (NULL);
-
-	word_count = count_words(str);
-	words = (char **)malloc(sizeof(char *) * (word_count + 1));
-
-	if (words == NULL)
-		return (NULL);
-
-	i = 0;
-	while (*str)
+	while (*str != ' ' && *str != '\0')
 	{
-		while (*str == ' ')
-			str++;
-
-		if (*str == '\0')
-			break;
-
-		j = 0;
-		while (str[j] != ' ' && str[j] != '\0')
-		j++;
-
-		words[i] = (char *)malloc(sizeof(char) * (j + 1));
-		if (words[i] == NULL)
-			return (NULL);
-
-		strncpy(words[i], str, j);
-		words[i][j] = '\0';
-		i++;
-
-		str += j;
+		count++;
+		str++;
 	}
-
-	words[word_count] = NULL;
-
-	return (words);
+	return (count);
 }
