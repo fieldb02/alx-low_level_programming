@@ -11,9 +11,11 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	size_t len1 = strlen(s1);
-	size_t len2 = strlen(s2);
-	char *new_str = malloc((len1 + len2 + 1) * sizeof(char));
+	int len1 = 0;
+	int len2 = 0;
+	int i = 0;
+	int j = 0;
+	char *res;
 
 	if (s1 == NULL)
 	{
@@ -23,11 +25,30 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-	if (new_str == NULL)
+	while (s1[len1])
+	{
+		len1++;
+	}
+	while (s2[len2])
+	{
+		len2++;
+	}
+	res = malloc(sizeof(char) * (len1 + len2 + 1));
+	if (res == NULL)
 	{
 		return (NULL);
 	}
-	memcpy(new_str, s1, len1);
-	memcpy(new_str + len1, s2, len2 + 1);
-	return (NULL);
+	while (i < len1)
+	{
+		res[i] = s1[i];
+		i++;
+	}
+	while (j < len2)
+	{
+		res[i] = s2[j];
+		i++;
+		j++;
+	}
+	res[i] = '\0';
+	return (res);
 }
