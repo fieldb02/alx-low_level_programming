@@ -49,6 +49,7 @@ unsigned long int multiply(unsigned int num1, unsigned int num2)
 int main(int argc, char *argv[])
 {
 	unsigned int num1, num2, i;
+
 	if (argc != 3)
 		print_error();
 	for (i = 0; argv[1][i] != '\0'; i++)
