@@ -1,0 +1,554 @@
+#!/bin/bash
+
+touch 6-abs.c
+
+#Create a file 6-abs.c
+cat <<EOF >6-abs.c
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+/**
+ * _abs - computes the absolute value of an integer
+ * @n: the integer to compute the absolute value of
+ *
+ * Return: the absolute value of n
+ */
+int _abs(int n)
+{
+	return abs(n);
+}
+EOF
+
+# Ensure the file adheres to the Betty coding style
+betty 6-abs.c
+
+#!/breate a file named "3-islower.c"
+touch 3-islower.c
+
+# Write the contents to the file
+cat <<EOF >3-islower.c
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+/**
+ * _islower - checks for lowercase character
+ * @c: the character to check
+ *
+ * Return: 1 if c is lowercase, 0 otherwise
+ */
+int _islower(int c)
+{
+    return (c >= 'a' && c <= 'z');
+}
+EOF
+
+# Ensure the file adheres to the Betty coding style
+betty 3-islower.c
+
+# Ensure the file adheres to the Betty coding style
+breate a file named "4-isalpha.c"
+touch 4-isalpha.c
+
+# Write the contents to the file
+cat <<EOF >4-isalpha.c
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+/**
+ * _isalpha - checks for alphabetic character
+ * @c: the character to check
+ *
+ * Return: 1 if c is alphabetic, 0 otherwise
+ */
+int _isalpha(int c)
+{
+	return isalpha(c);
+}
+EOF
+
+# Ensure the file adheres to the Betty coding style
+betty 4-isalpha.c
+
+reate a file named "0-isupper.c"
+touch 0-isupper.c
+
+# Write the contents to the file
+cat <<EOF >0-isupper.c
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+/**
+ * _isupper - checks for uppercase character
+ * @c: the character to check
+ *
+ * Return: 1 if c is uppercase, 0 otherwise
+ */
+int _isupper(int c)
+{
+    return (c >= 'A' && c <= 'Z');
+}
+EOF
+
+# Ensure the file adheres to the Betty coding style
+betty 0-isupper.c
+
+#!/bin/bash
+
+# Create a file named "1-isdigit.c"
+touch 1-isdigit.c
+
+# Write the contents to the file
+cat <<EOF >1-isdigit.c
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+/**
+ * _isdigit - checks for a digit (0 through 9)
+ * @c: the character to check
+ *
+ * Return: 1 if c is a digit, 0 otherwise
+ */
+int _isdigit(int c)
+{
+    return isdigit(c);
+}
+EOF
+
+# Ensure the file adheres to the Betty coding style
+betty 1-isdigit.c
+
+#!/bin/bash
+
+# Create a file named "2-strlen.c"
+touch 2-strlen.c
+
+# Write the contents to the file
+cat <<EOF >2-strlen.c
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+/**
+ * _strlen - returns the length of a string
+ * @s: the string to measure
+ *
+ * Return: the length of the string
+ */
+int _strlen(char *s)
+{
+    return strlen(s);
+}
+EOF
+
+# Ensure the file adheres to the Betty coding style
+betty 2-strlen.c
+
+#!/breate a file named "_putchar.c"
+touch _putchar.c
+
+# Write the contents to the file
+cat <<EOF >_putchar.c
+#include "main.h"
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+/**
+ * _putchar - writes a character to stdout
+ * @c: the character to print
+ *
+ * Return: On success 1, on error or end of file, -1 is returned
+ */
+int _putchar(char c)
+{
+    return putchar(c);
+}
+EOF
+
+# Ensure the file adheres to the Betty coding style
+betty _putchar.c
+
+
+# Create a file named "3-puts.c"
+touch 3-puts.c
+
+# Write the contents to the file
+cat <<EOF >3-puts.c
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+/**
+ * _puts - prints a string to stdout
+ * @s: the string to print
+ *
+ * Return: void
+ */
+void _puts(char *s)
+{
+    puts(s);
+}
+EOF
+
+# Ensure the file adheres to the Betty coding style
+betty 3-puts.c
+
+#!/breate a file named "5-strstr.c"
+touch 5-strstr.c
+
+# Write the contents to the file
+cat <<EOF >5-strstr.c
+#include "main.h"
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+/**
+ * _strstr - locates a substring in a string
+ * @haystack: the string to search in
+ * @needle: the substring to search for
+ *
+ * Return: pointer to the beginning of the located substring or NULL if not found
+ */
+char *_strstr(char *haystack, char *needle)
+{
+    return strstr(haystack, needle);
+}
+EOF
+
+# Ensure the file adheres to the Betty coding style
+betty 5-strstr.c
+
+
+# Create a file named "9-strcpy.c"
+touch 9-strcpy.c
+
+# Write the contents to the file
+cat <<EOF >9-strcpy.c
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+/**
+ * _strcpy - copies a string to a buffer
+ * @dest: the buffer to copy to
+ * @src: the string to copy
+ *
+ * Return: a pointer to the buffer
+ */
+char *_strcpy(char *dest, char *src)
+{
+    return strcpy(dest, src);
+}
+EOF
+
+# Ensure the file adheres to the Betty coding style
+betty 9-strcpy.c
+
+#!/breate a file named "0-memset.c"
+touch 0-memset.c
+
+# Write the contents to the file
+cat <<EOF >0-memset.c
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+/**
+ * _memset - fills memory with a constant byte
+ * @s: the memory area to fill
+ * @b: the byte to fill with
+ * @n: the number of bytes to fill
+ *
+ * Return: a pointer to the filled memory area
+ */
+char *_memset(char *s, char b, unsigned int n)
+{
+    return memset(s, b, n);
+}
+EOF
+
+# Ensure the file adheres to the Betty coding style
+betty 0-memset.c
+
+
+# Create a file named "100-atoi.c"
+touch 100-atoi.c
+
+# Write the contents to the file
+cat <<EOF >100-atoi.c
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+/**
+ * _atoi - converts a string to an integer
+ * @s: the string to convert
+ *
+ * Return: the converted integer value
+ */
+int _atoi(char *s)
+{
+    return atoi(s);
+}
+EOF
+
+# Ensure the file adheres to the Betty coding style
+betty 100-atoi.c
+
+#!/breate a file named "3-strcmp.c"
+touch 3-strcmp.c
+
+# Write the contents to the file
+cat <<EOF >3-strcmp.c
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+/**
+ * _strcmp - compares two strings
+ * @s1: the first string
+ * @s2: the second string
+ *
+ * Return: an integer representing the comparison result
+ */
+int _strcmp(char *s1, char *s2)
+{
+    return strcmp(s1, s2);
+}
+EOF
+
+# Ensure the file adheres to the Betty coding style
+betty 3-strcmp.c
+
+
+# Create a file named "0-strcat.c"
+touch 0-strcat.c
+
+# Write the contents to the file
+cat <<EOF >0-strcat.c
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+/**
+ * _strcat - concatenates two strings
+ * @dest: the destination string
+ * @src: the source string
+ *
+ * Return: a pointer to the resulting string
+ */
+char *_strcat(char *dest, char *src)
+{
+    return strcat(dest, src);
+}
+EOF
+
+# Ensure the file adheres to the Betty coding style
+betty 0-strcat.c
+
+#!/breate a file named "2-strncpy.c"
+touch 2-strncpy.c
+
+# Write the contents to the file
+cat <<EOF >2-strncpy.c
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+/**
+ * _strncpy - copies a string up to n bytes
+ * @dest: the destination string
+ * @src: the source string
+ * @n: the maximum number of bytes to copy
+ *
+ * Return: a pointer to the resulting string
+ */
+char *_strncpy(char *dest, char *src, int n)
+{
+    return strncpy(dest, src, n);
+}
+EOF
+
+# Ensure the file adheres to the Betty coding style
+betty 2-strncpy.c
+
+
+# Create a file named "1-strncat.c"
+touch 1-strncat.c
+
+# Write the contents to the file
+cat <<EOF >1-strncat.c
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+/**
+ * _strncat - concatenates two strings up to n bytes
+ * @dest: the destination string
+ * @src: the source string
+ * @n: the maximum number of bytes to concatenate
+ *
+ * Return: a pointer to the resulting string
+ */
+char *_strncat(char *dest, char *src, int n)
+{
+    return strncat(dest, src, n);
+}
+EOF
+
+# Ensure the file adheres to the Betty coding style
+betty 1-strncat.c
+
+#!/breate a file named "4-strpbrk.c"
+touch 4-strpbrk.c
+
+# Write the contents to the file
+cat <<EOF >4-strpbrk.c
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+/**
+ * _strpbrk - searches a string for any of a set of bytes
+ * @s: the string to search
+ * @accept: the set of bytes to search for
+ *
+ * Return: a pointer to the byte in s that matches one of the bytes in accept,
+ *         or NULL if no such byte is found.
+ */
+char *_strpbrk(char *s, char *accept)
+{
+    return strpbrk(s, accept);
+}
+EOF
+
+# Ensure the file adheres to the Betty coding style
+betty 4-strpbrk.c
+
+
+# Create a file named "1-memcpy.c"
+touch 1-memcpy.c
+
+# Write the contents to the file
+cat <<EOF >1-memcpy.c
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+/**
+ * _memcpy - copies n bytes from memory area src to memory area dest
+ * @dest: the destination memory area
+ * @src: the source memory area
+ * @n: the number of bytes to copy
+ *
+ * Return: a pointer to the destination memory area
+ */
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+    return memcpy(dest, src, n);
+}
+EOF
+
+# Ensure the file adheres to the Betty coding style
+betty 1-memcpy.c
+
+#!/breate a file named "3-strspn.c"
+touch 3-strspn.c
+
+# Write the contents to the file
+cat <<EOF >3-strspn.c
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+/**
+ * _strspn - gets the length of a prefix substring
+ * @s: the string to search
+ * @accept: the characters to include in the prefix
+ *
+ * Return: the number of bytes in the initial segment of s which consist only
+ * of bytes from accept
+ */
+unsigned int _strspn(char *s, char *accept)
+{
+    return strspn(s, accept);
+}
+EOF
+
+# Ensure the file adheres to the Betty coding style
+betty 3-strspn.c
+
+
+# Create a file named "2-strchr.c"
+touch 2-strchr.c
+
+# Write the contents to the file
+cat <<EOF >2-strchr.c
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+/**
+ * _strchr - locates a character in a string
+ * @s: the string to search in
+ * @c: the character to locate
+ *
+ * Return: a pointer to the first occurrence of the character in the string,
+ *         or NULL if the character is not found
+ */
+char *_strchr(char *s, char c)
+{
+    return strchr(s, c);
+}
+EOF
+
+# Ensure the file adheres to the Betty coding style
+betty 2-strchr.c
+
+
