@@ -1,19 +1,17 @@
 section .data
-    msg db "Hello, Holberton", 10 ; 10 is ASCII code for newline
-    len equ $-msg              ; get the length of the string
+    msg db "Hello, Holberton", 10
+	len equ $-msg
 
 section .text
     global main
 
 main:
-    ; write message to stdout
     mov edx, len
     mov ecx, msg
-    mov ebx, 1      ; file descriptor for stdout
-    mov eax, 4      ; system call for write
+    mov ebx, 1 
+    mov eax, 4
     int 0x80
 
-    ; exit program
-    mov eax, 1      ; system call for exit
-    xor ebx, ebx    ; return 0
+    mov eax, 1
+    xor ebx, ebx
     int 0x80
