@@ -1,6 +1,8 @@
 #ifndef _LISTS_H
 #define _LISTS_H
 
+#include <stddef.h>
+
 /**
  * struct list_s - singly linked lists
  * @str: string
