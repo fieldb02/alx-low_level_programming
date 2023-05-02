@@ -16,6 +16,10 @@ void free_listint2(listint_t **head)
 	{
 		return;
 	}
+	if (*head == NULL)
+	{
+		return;
+	}
 	while (*head == NULL)
 	{
 		p = *head;
