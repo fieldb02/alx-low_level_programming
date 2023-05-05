@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 
+int get_endianness(void);
+
 int main(void)
 {
 	int n;
