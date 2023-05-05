@@ -10,20 +10,25 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int binary;
+	unsigned int binary = 0;
+	int i;
 
 	if (b == NULL)
 	{
 		return (0);
 	}
-	while (*b != '\0')
+	for (i = 0; b[i] != '\0'; i++)
 	{
-		if (*b != '0' && *b != '1')
+		if (b[i] == '0')
 		{
-			return (0);
+			binary <<= 1;
 		}
-		binary = binary * 2 + (*b - '0');
-		b++;
+		else if (b[i] == '1')
+		{
+			binary = (binary << 1) | 1;
+		}
+		else
+			return (0);
 	}
 	return (binary);
 }
