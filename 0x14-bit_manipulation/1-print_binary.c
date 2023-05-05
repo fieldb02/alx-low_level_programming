@@ -10,6 +10,7 @@ void print_binary(unsigned long int n)
 {
 	unsigned long int i;
 	int binary = 0;
+	int front;
 
 	i = 1ul << ((sizeof(unsigned long int) * 8) - 1);
 	while (i > 0)
@@ -17,8 +18,9 @@ void print_binary(unsigned long int n)
 		if (n & i)
 		{
 			_putchar('1');
+			front = 1;
 		}
-		else
+		else if (front)
 		{
 			_putchar('0');
 		}
